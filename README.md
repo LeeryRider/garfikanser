@@ -59,3 +59,7 @@ scripts/                  Kaynak çıkarım ve arama indeksleme
 - Tüm kaynak metinleri *matematiksel olarak bağımsız yeniden doğrulanmış* sayılmaz. Orijinal kaynakta hata veya görünüm farkı bulunabileceği için PDF sayfa numarası her örnekte yer alır.
 
 **Kullanılan kaynak:** Kullanıcının sağladığı `Konular.pdf` (730 s.), `GENEL.pdf` (46 s.), `VIZE.pdf` (22 s.), `BEZIER_BSPLINE_MATEMATIK_REHBERI.pdf` (39 s.), `sorular.pdf` (21 s.) ve 2025 konu notu. Referans BZ205 sitesinin gezinme/çalışma fikrinden esinlenilmiştir; içerik ve kod bu projeye özeldir.
+
+## GitHub Pages için PDF sayfaları
+
+GitHub yükleme sınırları nedeniyle `Konular.pdf` ve `sorular.pdf` kaynakları, **sayfa içerikleri değiştirilmeden** `kaynaklar/parcalar/` klasöründe sırasıyla 50 ve 2 sayfalık küçük PDF dosyalarına ayrılmıştır. Sitedeki kaynak bağlantıları özgün sayfa numarasını otomatik olarak ilgili PDF parçasına çevirir. Kaynak kütüphanesinde tüm parçalara doğrudan ulaşılabilir. Bu dağıtımın amacı metin veya görseli özetlemek değil, orijinal sayfaları eksiksiz sunmaktır. İndirilebilir ZIP içerisinde orijinal bütün PDF dosyaları da saklanabilir.
