@@ -3,13 +3,13 @@
 ## Kapsam
 - Orijinal `Konular.pdf`: 730 sayfa.
 - PDF dosyasındaki **625** adet E01/E02/... tipinde başlıklandırılmış, çözüm adımlarına sahip örnek sayfası programlı olarak ayrıştırıldı. Bazı özet sayfalarda örneklere atıf geçen E numaraları gerçek çözüm sayfası olarak sayılmadı.
-- 7 uzun konu ustalık dersi, 26 kısa ders, 21 sınav uygulaması, 75 çoktan seçmeli test, 5 hesaplama laboratuvarı.
+- 19 uzun konu ustalık dersi, 26 kısa ders, 21 sınav uygulaması, 75 çoktan seçmeli test, 5 hesaplama laboratuvarı.
 - 2025 notunda dört konu vardır, tam soru metinleri yoktur.
 
 ## Fonksiyonel kontroller
 - Ders kitabı: 625 kart, 7 hafta filtresi, başlık/soru/öğretmen açıklaması araması, 24 öğeli sayfalandırma.
 - Çözüm sayfası: öğretmen anlatımı, soru, verilenler, semboller, kapalı adımlar, ilerlemeli açma, tamamlanınca sonuç ve sağlama, orijinal PDF bağlantısı.
-- Derin ders: 7 konu için neden + formül + sayısal işlemler + sağlama + sınav tuzağı, aşamalı gösterim.
+- Derin ders: 19 konu için neden + formül + sayısal işlemler + sağlama + sınav tuzağı, aşamalı gösterim.
 - 26 dersten uzun derslere ve eşleşen kaynak örneklere geçiş.
 - Quiz, flashcards, hesaplama laboratuvarı, gezinme, arama ve tema kontrolü.
 - Mobil 390px ve masaüstü 1440px görünüm: yatay taşma yok, JS çalışma zamanı hatası yok.
