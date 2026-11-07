@@ -1,0 +1,9 @@
+Bilgisayar Grafik 2025 Vize
+
+1. Soru düğüm vektörü bulma
+
+2. Projeksiyon.
+
+3. Kontrol noktaları ve derecesi verilen bezier eğrisinin uç noktalarda 1. Dereceden türevi (2 boyutlu duzlemde olcekleme yaparken x y bagıntısı yazma gibi bişeydi)
+
+4. 3 kontrol noktalı bir eğrinin değişmeden 4 kontrol noktalı yapılması

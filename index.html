@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090e1b">
+  <meta name="description" content="BZ303 Bilgisayar Grafikleri: sıfırdan konu anlatımı, Bézier ve B-spline laboratuvarları, çözümlü çıkmışlar, deneme sınavları ve 730 sayfalık ders kitabı, 625 çözüm ve 858 sayfalık kaynak arşivi.">
+  <title>BZ303 · Grafik Akademisi</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('gfx-theme')||'dark'}catch(e){}</script>
+</head>
+<body>
+  <a class="skip" href="#app">İçeriğe geç</a>
+  <div class="site-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Kenar menüsü">
+      <button type="button" class="sidebar-close" id="sidebarClose" aria-label="Menüyü kapat">✕</button>
+      <a class="side-brand" href="#/" aria-label="Grafik Akademisi — ana sayfa"><span class="brand-mark"><svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M6 22V9h13l7 7-7 7H6Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="15" cy="16" r="3" fill="currentColor"/><path d="m19 9-4 7 11 0" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span><span><b>grafik<span class="brand-dot">.</span>akademi</b><small>BZ303 • Bilgisayar Grafikleri</small></span></a>
+      <div class="side-scroll">
+        <div class="side-label">ÇALIŞMA ALANI</div>
+        <nav class="side-nav" aria-label="Ana gezinme">
+          <a data-route="home" href="#/"><span class="nav-ico">◈</span>Genel bakış<span class="nav-arrow">›</span></a>
+          <a data-route="topics" href="#/konular"><span class="nav-ico">▦</span>Konu anlatımı<span class="nav-arrow">›</span></a>
+          <a data-route="coursebook" href="#/derslik"><span class="nav-ico">◧</span>625 çözümlü ders kitabı<span class="nav-arrow">›</span></a>
+          <a data-route="lab" href="#/laboratuvar"><span class="nav-ico">⌁</span>Etkileşimli laboratuvar<span class="nav-arrow">›</span></a>
+          <a data-route="exams" href="#/cikmislar"><span class="nav-ico">▤</span>Çıkmış sorular<span class="nav-arrow">›</span></a>
+          <a data-route="quiz" href="#/deneme"><span class="nav-ico">◎</span>Deneme sınavı<span class="nav-arrow">›</span></a>
+          <a data-route="cards" href="#/kartlar"><span class="nav-ico">▧</span>Hafıza kartları<span class="nav-arrow">›</span></a>
+        </nav>
+        <div class="side-label side-label-spaced">BAŞVURU</div>
+        <nav class="side-nav" aria-label="Başvuru gezintisi">
+          <a data-route="formulas" href="#/formuller"><span class="nav-ico">ƒ</span>Formül kütüphanesi<span class="nav-arrow">›</span></a>
+          <a data-route="sources" href="#/kaynaklar"><span class="nav-ico">◫</span>Kaynak PDF'ler<span class="nav-arrow">›</span></a>
+        </nav>
+        <div class="side-label side-label-spaced">ÖĞRENME ROTASI</div>
+        <div class="side-outline" id="outlineNav"></div>
+      </div>
+      <div class="side-footer"><div class="side-progress"><div class="side-progress-line"><span>İlerleme</span><b id="sidePct">%0</b></div><div class="meter"><div id="sideMeter"></div></div><small id="sideStat">0 konu tamamlandı</small></div><p>Çevrimdışı çalışır · Kayıtlar bu tarayıcıda</p></div>
+    </aside>
+    <div class="content-shell">
+      <header class="topbar">
+        <button type="button" class="icon-btn mobile-menu" id="menuBtn" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+        <div class="breadcrumb" id="breadcrumb"><span class="crumb-base">BZ303</span><span class="crumb-sep">/</span><b>Genel bakış</b></div>
+        <div class="top-actions">
+          <button class="search-trigger" id="searchBtn" type="button"><span class="search-ico">⌕</span><span class="search-text">Derslerde ve PDF'lerde ara...</span><kbd>Ctrl K</kbd></button>
+          <button class="icon-btn" id="themeBtn" type="button" aria-label="Açık veya koyu temayı değiştir" title="Temayı değiştir">☼</button>
+          <a class="top-cta" href="#/deneme">Deneme çöz <span>↗</span></a>
+        </div>
+      </header>
+      <main id="app" tabindex="-1"><noscript>Bu eğitim platformunun etkileşimli bölümleri için JavaScript gereklidir. Kaynak PDF'leri kaynaklar klasöründen açabilirsin.</noscript></main>
+      <footer class="main-footer"><span>BZ303 Grafik Akademisi · Eğitim amaçlı bağımsız çalışma kaynağı</span><span>İçerik: yüklediğin ders notları ve çözümler · <a href="#/kaynaklar">Kaynakları gör</a></span></footer>
+    </div>
+  </div>
+  <div class="modal-backdrop" id="searchModal" hidden>
+    <div class="search-dialog" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+      <div class="search-input-wrap"><span class="search-ico">⌕</span><label class="sr-only" for="searchInput" id="searchTitle">Bütün kaynaklarda ara</label><input id="searchInput" type="search" autocomplete="off" placeholder="Örn. Bézier türev, perspektif, düğüm..."/><button id="closeSearch" class="key-close" type="button">Esc</button></div>
+      <div class="search-tip">Konu anlatımları, çıkmış sorular ve 837 metin sayfası arasında ara. <small>Taranmış 21 sayfalık soru defteri PDF olarak açılır.</small></div>
+      <div id="searchResults" class="search-results"></div>
+      <div class="search-foot">↑ ↓ sonuçlarda gez · Enter aç · Esc kapat <span>Çevrimdışı tam metin dizini</span></div>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <script src="data/lessons.js" defer></script>
+  <script src="data/exams.js" defer></script>
+  <script src="data/quiz.js" defer></script>
+  <script src="data/search-index.js" defer></script>
+  <script src="data/search-part-00.js" defer></script>
+  <script src="data/search-part-01.js" defer></script>
+  <script src="data/search-part-02.js" defer></script>
+  <script src="data/search-part-03.js" defer></script>
+  <script src="data/search-part-04.js" defer></script>
+  <script src="data/search-part-05.js" defer></script>
+  <script src="data/search-part-06.js" defer></script>
+  <script src="data/search-part-07.js" defer></script>
+  <script src="data/search-part-08.js" defer></script>
+  <script src="data/search-part-09.js" defer></script>
+  <script src="data/search-part-10.js" defer></script>
+  <script src="data/search-part-11.js" defer></script>
+  <script src="data/search-part-12.js" defer></script>
+  <script src="data/search-part-13.js" defer></script>
+  <script src="data/search-part-14.js" defer></script>
+  <script src="data/search-part-15.js" defer></script>
+  <script src="data/search-part-16.js" defer></script>
+  <script src="data/search-part-17.js" defer></script>
+  <script src="data/search-part-18.js" defer></script>
+  <script src="data/search-part-19.js" defer></script>
+  <script>window.GFX_COMPENDIUM=[];</script>
+  <script src="data/coursebook-meta.js" defer></script>
+  <script src="data/coursebook-00.js" defer></script>
+  <script src="data/coursebook-01.js" defer></script>
+  <script src="data/coursebook-02.js" defer></script>
+  <script src="data/coursebook-03.js" defer></script>
+  <script src="data/coursebook-04.js" defer></script>
+  <script src="data/coursebook-05.js" defer></script>
+  <script src="data/coursebook-06.js" defer></script>
+  <script src="data/coursebook-07.js" defer></script>
+  <script src="data/coursebook-08.js" defer></script>
+  <script src="data/coursebook-09.js" defer></script>
+  <script src="data/coursebook-10.js" defer></script>
+  <script src="data/coursebook-11.js" defer></script>
+  <script src="data/coursebook-12.js" defer></script>
+  <script src="data/coursebook-13.js" defer></script>
+  <script src="data/coursebook-14.js" defer></script>
+  <script src="data/coursebook-15.js" defer></script>
+  <script src="data/coursebook-16.js" defer></script>
+  <script src="data/coursebook-17.js" defer></script>
+  <script src="data/coursebook-18.js" defer></script>
+  <script src="data/coursebook-19.js" defer></script>
+  <script src="data/coursebook-20.js" defer></script>
+  <script src="data/coursebook-21.js" defer></script>
+  <script src="data/coursebook-22.js" defer></script>
+  <script src="data/masterclasses.js" defer></script>
+  <script src="assets/coursebook.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+window.GFX_SOURCE_INDEX=[];

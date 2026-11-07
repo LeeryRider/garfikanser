@@ -1,0 +1,1 @@
+window.GFX_COURSEBOOK_META={"pdfPages": 730, "examples": 625, "source": "Konular.pdf", "weeks": [1, 2, 3, 4, 5, 6, 7]};
